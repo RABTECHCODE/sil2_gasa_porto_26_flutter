@@ -11,8 +11,14 @@ class AccueilPage extends StatelessWidget {
       body: Column(
         children: [
           Expanded(
+            flex: 3,
             child: Center(
-              child: Text("Bienvenue sur TestApp, notre premiere appli flutter.", style: TextStyle(fontSize: 24)),
+              child: Column(
+                children: [
+                  Container(height: 400, child: Image.asset("assets/img_enfant_courant.jpg")),
+                  Text("Bienvenue sur TestApp, notre premiere appli flutter.", style: TextStyle(fontSize: 24)),
+                ],
+              ),
             ),
           ),
           Expanded(
