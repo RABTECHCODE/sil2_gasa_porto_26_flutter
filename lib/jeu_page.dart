@@ -1,0 +1,42 @@
+import 'package:flutter/material.dart';
+
+class JeuPage extends StatefulWidget {
+  const JeuPage({super.key});
+
+  @override
+  State<JeuPage> createState() => _JeuPageState();
+}
+
+class _JeuPageState extends State<JeuPage> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text("Jeu")),
+      body: Column(
+        children: [
+          Expanded(child: Column(children: [Text("Score:25"), Text("Appuyez sur le cadre vert")])),
+          Expanded(child: Row(children: [cadre(numeroCadre: 1), cadre(numeroCadre: 2), cadre(numeroCadre: 3)])),
+          Expanded(child: Row(children: [cadre(numeroCadre: 4), cadre(numeroCadre: 5), cadre(numeroCadre: 6)])),
+          Expanded(child: Row(children: [cadre(numeroCadre: 7), cadre(numeroCadre: 8), cadre(numeroCadre: 9)])),
+        ],
+      ),
+    );
+  }
+
+  Widget cadre({Color couleur = Colors.red, int? numeroCadre}) {
+    return Expanded(
+      child: GestureDetector(
+        onTap: () {
+          print("Cardre appuyé $numeroCadre");
+        },
+        child: Container(margin: EdgeInsets.all(1), color: couleur),
+      ),
+    );
+  }
+}

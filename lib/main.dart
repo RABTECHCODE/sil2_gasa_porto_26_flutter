@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:test_app/page_2.dart';
+import 'package:test_app/accueil_page.dart';
 
 void main() {
   runApp(myApp());
 }
 
 Widget myApp() {
-  return MaterialApp(title: "Notre App", home: Page2());
+  return MaterialApp(title: "Notre App", home: AccueilPage());
 }
