@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
@@ -16,6 +17,15 @@ class _JeuPageState extends State<JeuPage> {
   void nouveauJeu() {
     setState(() {
       positionBonneReponse = Random().nextInt(9) + 1;
+    });
+  }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    Timer.periodic(Duration(milliseconds: 2000), (t) {
+      nouveauJeu();
     });
   }
 
